@@ -1,0 +1,6 @@
+framework module Pods_CountryBook {
+  umbrella header "Pods-CountryBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
