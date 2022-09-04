@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27A38DC4901394B667A0732E /* Pods_CountryBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1FAED5F880F9E75036318F /* Pods_CountryBook.framework */; };
 		545E5C0C28C4CC2F00478444 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */; };
 		54E9B67228C0983700C72E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B67128C0983700C72E6B /* AppDelegate.swift */; };
 		54E9B67428C0983700C72E6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B67328C0983700C72E6B /* SceneDelegate.swift */; };
@@ -18,11 +17,14 @@
 		54E9B68928C09E5800C72E6B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B68828C09E5800C72E6B /* HomeViewController.swift */; };
 		54E9B69128C0D9AE00C72E6B /* DetailsCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B69028C0D9AE00C72E6B /* DetailsCardVC.swift */; };
 		54E9B69328C10F4900C72E6B /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B69228C10F4900C72E6B /* SavedViewController.swift */; };
+		6EF869C798A21EA38C7A35D4 /* Pods_Countries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C28C9D7D85B2E460D9032D1 /* Pods_Countries.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076458DEE84BE52AB32231F3 /* Pods-Countries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countries.debug.xcconfig"; path = "Target Support Files/Pods-Countries/Pods-Countries.debug.xcconfig"; sourceTree = "<group>"; };
+		4E7F9145EDAC951C9730BA0D /* Pods-Countries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countries.release.xcconfig"; path = "Target Support Files/Pods-Countries/Pods-Countries.release.xcconfig"; sourceTree = "<group>"; };
 		545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		54E9B66E28C0983700C72E6B /* CountryBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E9B66E28C0983700C72E6B /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9B67128C0983700C72E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54E9B67328C0983700C72E6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		54E9B67828C0983700C72E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,8 +35,8 @@
 		54E9B68828C09E5800C72E6B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		54E9B69028C0D9AE00C72E6B /* DetailsCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCardVC.swift; sourceTree = "<group>"; };
 		54E9B69228C10F4900C72E6B /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		9C28C9D7D85B2E460D9032D1 /* Pods_Countries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Countries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B363422B01694F4A4CE405F0 /* Pods-CountryBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryBook.debug.xcconfig"; path = "Target Support Files/Pods-CountryBook/Pods-CountryBook.debug.xcconfig"; sourceTree = "<group>"; };
-		BA1FAED5F880F9E75036318F /* Pods_CountryBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6935935DC27ADA6A6F143D /* Pods-CountryBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryBook.release.xcconfig"; path = "Target Support Files/Pods-CountryBook/Pods-CountryBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A38DC4901394B667A0732E /* Pods_CountryBook.framework in Frameworks */,
+				6EF869C798A21EA38C7A35D4 /* Pods_Countries.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +55,7 @@
 		04CD08D30CEA43115E0110D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA1FAED5F880F9E75036318F /* Pods_CountryBook.framework */,
+				9C28C9D7D85B2E460D9032D1 /* Pods_Countries.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -63,6 +65,8 @@
 			children = (
 				B363422B01694F4A4CE405F0 /* Pods-CountryBook.debug.xcconfig */,
 				DE6935935DC27ADA6A6F143D /* Pods-CountryBook.release.xcconfig */,
+				076458DEE84BE52AB32231F3 /* Pods-Countries.debug.xcconfig */,
+				4E7F9145EDAC951C9730BA0D /* Pods-Countries.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -70,7 +74,7 @@
 		54E9B66528C0983700C72E6B = {
 			isa = PBXGroup;
 			children = (
-				54E9B67028C0983700C72E6B /* CountryBook */,
+				54E9B67028C0983700C72E6B /* Countries */,
 				54E9B66F28C0983700C72E6B /* Products */,
 				0644E64C6A581DAB5C5328FD /* Pods */,
 				04CD08D30CEA43115E0110D7 /* Frameworks */,
@@ -80,12 +84,12 @@
 		54E9B66F28C0983700C72E6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54E9B66E28C0983700C72E6B /* CountryBook.app */,
+				54E9B66E28C0983700C72E6B /* Countries.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		54E9B67028C0983700C72E6B /* CountryBook */ = {
+		54E9B67028C0983700C72E6B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
 				54E9B67128C0983700C72E6B /* AppDelegate.swift */,
@@ -100,15 +104,15 @@
 				54E9B69228C10F4900C72E6B /* SavedViewController.swift */,
 				545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */,
 			);
-			path = CountryBook;
+			path = Countries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54E9B66D28C0983700C72E6B /* CountryBook */ = {
+		54E9B66D28C0983700C72E6B /* Countries */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54E9B68528C0983A00C72E6B /* Build configuration list for PBXNativeTarget "CountryBook" */;
+			buildConfigurationList = 54E9B68528C0983A00C72E6B /* Build configuration list for PBXNativeTarget "Countries" */;
 			buildPhases = (
 				55A9ADF28A6A83AB559E6C58 /* [CP] Check Pods Manifest.lock */,
 				54E9B66A28C0983700C72E6B /* Sources */,
@@ -120,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = CountryBook;
+			name = Countries;
 			productName = CountryBook;
-			productReference = 54E9B66E28C0983700C72E6B /* CountryBook.app */;
+			productReference = 54E9B66E28C0983700C72E6B /* Countries.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 54E9B66928C0983700C72E6B /* Build configuration list for PBXProject "CountryBook" */;
+			buildConfigurationList = 54E9B66928C0983700C72E6B /* Build configuration list for PBXProject "Countries" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54E9B66D28C0983700C72E6B /* CountryBook */,
+				54E9B66D28C0983700C72E6B /* Countries */,
 			);
 		};
 /* End PBXProject section */
@@ -178,15 +182,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CountryBook/Pods-CountryBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Countries/Pods-Countries-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CountryBook/Pods-CountryBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Countries/Pods-Countries-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountryBook/Pods-CountryBook-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Countries/Pods-Countries-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55A9ADF28A6A83AB559E6C58 /* [CP] Check Pods Manifest.lock */ = {
@@ -204,7 +208,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CountryBook-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Countries-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,7 +370,7 @@
 		};
 		54E9B68628C0983A00C72E6B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B363422B01694F4A4CE405F0 /* Pods-CountryBook.debug.xcconfig */;
+			baseConfigurationReference = 076458DEE84BE52AB32231F3 /* Pods-Countries.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43AL79RXM6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CountryBook/Info.plist;
+				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -385,7 +389,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.utkukaangulsoy.CountryBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.utkukaangulsoy.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,7 +399,7 @@
 		};
 		54E9B68728C0983A00C72E6B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE6935935DC27ADA6A6F143D /* Pods-CountryBook.release.xcconfig */;
+			baseConfigurationReference = 4E7F9145EDAC951C9730BA0D /* Pods-Countries.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -403,7 +407,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43AL79RXM6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CountryBook/Info.plist;
+				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -414,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.utkukaangulsoy.CountryBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.utkukaangulsoy.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -425,7 +429,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54E9B66928C0983700C72E6B /* Build configuration list for PBXProject "CountryBook" */ = {
+		54E9B66928C0983700C72E6B /* Build configuration list for PBXProject "Countries" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54E9B68328C0983A00C72E6B /* Debug */,
@@ -434,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54E9B68528C0983A00C72E6B /* Build configuration list for PBXNativeTarget "CountryBook" */ = {
+		54E9B68528C0983A00C72E6B /* Build configuration list for PBXNativeTarget "Countries" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54E9B68628C0983A00C72E6B /* Debug */,
