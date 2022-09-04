@@ -7,6 +7,7 @@ iOS 15.0+.
 Xcode 13.4.1. 
 
 Installing:  
-Clone the code to Xcode and run.  
-No need to external librares.  
+Clone the project to Xcode.
+DO NOT use CountryBook.xcodeproj. USE CountryBook.xcworkspace
+
 
