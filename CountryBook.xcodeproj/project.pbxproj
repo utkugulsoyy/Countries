@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27A38DC4901394B667A0732E /* Pods_CountryBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1FAED5F880F9E75036318F /* Pods_CountryBook.framework */; };
+		545E5C0C28C4CC2F00478444 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */; };
 		54E9B67228C0983700C72E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B67128C0983700C72E6B /* AppDelegate.swift */; };
 		54E9B67428C0983700C72E6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9B67328C0983700C72E6B /* SceneDelegate.swift */; };
 		54E9B67928C0983700C72E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E9B67728C0983700C72E6B /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		54E9B66E28C0983700C72E6B /* CountryBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9B67128C0983700C72E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54E9B67328C0983700C72E6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 				B363422B01694F4A4CE405F0 /* Pods-CountryBook.debug.xcconfig */,
 				DE6935935DC27ADA6A6F143D /* Pods-CountryBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 				54E9B67A28C0983700C72E6B /* CountryBook.xcdatamodeld */,
 				54E9B69028C0D9AE00C72E6B /* DetailsCardVC.swift */,
 				54E9B69228C10F4900C72E6B /* SavedViewController.swift */,
+				545E5C0B28C4CC2F00478444 /* CoreDataManager.swift */,
 			);
 			path = CountryBook;
 			sourceTree = "<group>";
@@ -221,6 +223,7 @@
 				54E9B67428C0983700C72E6B /* SceneDelegate.swift in Sources */,
 				54E9B69128C0D9AE00C72E6B /* DetailsCardVC.swift in Sources */,
 				54E9B68928C09E5800C72E6B /* HomeViewController.swift in Sources */,
+				545E5C0C28C4CC2F00478444 /* CoreDataManager.swift in Sources */,
 				54E9B67C28C0983700C72E6B /* CountryBook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

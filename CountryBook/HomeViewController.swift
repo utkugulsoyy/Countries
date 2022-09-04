@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var chosenCountryWikiId = ""
     
     var savedCountryCodes = [String]()
+    var coreDataManager = CoreDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var content = cell.defaultContentConfiguration()
         let countryNames = Array(countryInfos.keys)
         let currentCountryCode = countryInfos[countryNames[indexPath.row]]![0]
-        if isExist(countryCode: currentCountryCode){
+        if coreDataManager.isExist(countryCode: currentCountryCode){
             content.image = UIImage(systemName: "star.fill")
         }else{
             content.image = UIImage(systemName: "star")
@@ -114,32 +115,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         dataTask.resume()
     }
-    
-    func isExist(countryCode: String) -> Bool{
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedCountries")
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do{
-            let results = try context.fetch(fetchRequest)
-            
-            for result in results as! [NSManagedObject]{
-                if let code = result.value(forKey: "code") as? String {
-                    if code == countryCode{
-                    return true
-                    }
-                }
-            }
-            
-        } catch{
-            print("fetch error")
-        }
-        
-        return false
-    }
-    
-    
 }

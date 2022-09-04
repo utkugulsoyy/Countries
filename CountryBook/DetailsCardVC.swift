@@ -20,25 +20,22 @@ class DetailsCardVC: UIViewController {
     var selectedCountryCode = ""
     var selectedCountryWikiId = ""
     
-    
-    var savedCountryCodes = [String]()
-    
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let coreDataManager = CoreDataManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedCountryName
         rightBarButtonItem.image = UIImage(systemName: "star")
-        if isExist(countryCode: selectedCountryCode){
+        if coreDataManager.isExist(countryCode: selectedCountryCode){
             rightBarButtonItem.image = UIImage(systemName: "star.fill")
         }
-       
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if isExist(countryCode: selectedCountryCode){
+        if coreDataManager.isExist(countryCode: selectedCountryCode){
             rightBarButtonItem.image = UIImage(systemName: "star.fill")
         }
         countryCodeLabel.text = "Country Code: " + selectedCountryCode
@@ -48,12 +45,12 @@ class DetailsCardVC: UIViewController {
     
     @IBAction func rigthBarButtonPressed(_ sender: UIBarButtonItem) {
         
-        if isExist(countryCode: selectedCountryCode){
-            deleteCountry()
+        if coreDataManager.isExist(countryCode: selectedCountryCode){
+            coreDataManager.deleteCountry(countryCode: selectedCountryCode)
             rightBarButtonItem.image = UIImage(systemName: "star")
             
         } else{
-            addCountry()
+            coreDataManager.addCountry(countryCode: selectedCountryCode, countryName: selectedCountryName, countryWikiId: selectedCountryWikiId)
             rightBarButtonItem.image = UIImage(systemName: "star.fill")
             
         }
@@ -65,97 +62,6 @@ class DetailsCardVC: UIViewController {
         } else{
             print("Url is not correct.")
         }
-    }
-    
-    
-    func getCoreData(){
-        savedCountryCodes.removeAll()
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedCountries")
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do{
-            let results = try context.fetch(fetchRequest)
-            
-            for result in results as! [NSManagedObject]{
-                if let code = result.value(forKey: "code") as? String {
-                    savedCountryCodes.append(code)
-                    
-                }
-            }
-            
-        } catch{
-            print("fetch error")
-        }
-        
-        
-    }
-    
-    func addCountry(){
-        let context = appDelegate.persistentContainer.viewContext
-        let newCountry = NSEntityDescription.insertNewObject(forEntityName: "SavedCountries", into: context)
-        newCountry.setValue(selectedCountryName, forKey: "name" )
-        newCountry.setValue(selectedCountryCode, forKey: "code")
-        newCountry.setValue(selectedCountryWikiId, forKey: "wikiId")
-        
-        do{
-            try context.save()
-        } catch{
-            print("saving error!")
-        }
-    }
-    
-    func deleteCountry(){
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedCountries")
-        
-        fetchRequest.predicate = NSPredicate(format: "code = %@", selectedCountryCode)
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do{
-            let results = try context.fetch(fetchRequest)
-            if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    if (result.value(forKey: "code") != nil) {
-                        context.delete(result)
-                        getCoreData()
-                        do{
-                            try context.save()
-                            
-                        }catch{
-                            print("deleting error")
-                        }
-                    }
-                }
-            }
-        } catch{
-            print("delete error")
-        }
-        
-    }
-    
-    
-    func isExist(countryCode: String) -> Bool{
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedCountries")
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do{
-            let results = try context.fetch(fetchRequest)
-            
-            for result in results as! [NSManagedObject]{
-                if let code = result.value(forKey: "code") as? String {
-                    if code == countryCode{
-                        return true
-                    }
-                }
-            }
-            
-        } catch{
-            print("fetch error")
-        }
-        return false
     }
     
     func getData()
@@ -185,10 +91,7 @@ class DetailsCardVC: UIViewController {
                             {
                                 let flagUriTxt = countryDetails["flagImageUri"] as! String
                                 let uri = URL(string: flagUriTxt)
-                                print(uri!)
                                 self.flagImageView.downloadedsvg(from: uri!)
-                                
-                                
                                 
                             }else{
                                 print("error when casting response data")
